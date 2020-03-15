@@ -15,8 +15,12 @@ class MasterViewController: UITableViewController {
 
 
     override func viewDidLoad() {
+        NewRelic.recordBreadcrumb("MasterViewController"
+        , attributes:["Name" : "viewDidLoad", "userId" : "SampleUser", "action" : "tapped", "location" : "MasterViewController:viewDidLoad"])
+
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        NewRelic.recordCustomEvent("MobileCustomEdTest",name:"Test", attributes: ["where" : "MasterViewController:viewDidLoad", "value": 1])
         navigationItem.leftBarButtonItem = editButtonItem
 
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
@@ -28,12 +32,17 @@ class MasterViewController: UITableViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        NewRelic.recordCustomEvent("MobileCustomEdTest",name:"Test",  attributes: ["where" : "MasterViewController:viewWillAppear", "value": 2])
+        NewRelic.recordBreadcrumb("MasterViewController"
+        , attributes:["Name" : "viewWillAppear", "userId" : "SampleUser", "action" : "tapped", "location" : "MasterViewController:viewWillAppear"])
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
     }
 
     @objc
     func insertNewObject(_ sender: Any) {
+        NewRelic.recordBreadcrumb("MasterViewController"
+        , attributes:["Name" : "insertNewObject", "userId" : "SampleUser", "action" : "tapped", "location" : "MasterViewController:insertNewObject"])
         objects.insert(NSDate(), at: 0)
         let indexPath = IndexPath(row: 0, section: 0)
         tableView.insertRows(at: [indexPath], with: .automatic)
@@ -42,6 +51,9 @@ class MasterViewController: UITableViewController {
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        NewRelic.recordBreadcrumb("MasterViewController"
+        , attributes:["Name" : "prepare", "userId" : "SampleUser", "action" : "tapped", "location" : "MasterViewController:prepare"])
+        NewRelic.recordCustomEvent("MobileCustomEdTest",name:"Test",  attributes: ["where" : "MasterViewController:prepare", "value": 3])
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row] as! NSDate

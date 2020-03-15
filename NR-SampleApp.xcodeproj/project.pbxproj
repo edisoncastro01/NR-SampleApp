@@ -16,6 +16,11 @@
 		04BF8171241C1D4900164E1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04BF816F241C1D4900164E1F /* LaunchScreen.storyboard */; };
 		04BF817C241C1D4900164E1F /* NR_SampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF817B241C1D4900164E1F /* NR_SampleAppTests.swift */; };
 		04BF8187241C1D4900164E1F /* NR_SampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04BF8186241C1D4900164E1F /* NR_SampleAppUITests.swift */; };
+		04BF8195241C1DC200164E1F /* NewRelicAgent.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BF8194241C1DC200164E1F /* NewRelicAgent.framework */; };
+		04BF819D241C257B00164E1F /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BF819C241C257B00164E1F /* CoreTelephony.framework */; };
+		04BF819F241C258E00164E1F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BF819E241C258E00164E1F /* SystemConfiguration.framework */; };
+		04BF81A2241C25D300164E1F /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BF81A1241C25BF00164E1F /* libz.tbd */; };
+		04BF81A3241C25DD00164E1F /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04BF81A0241C25AD00164E1F /* libc++.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,12 @@
 		04BF8182241C1D4900164E1F /* NR-SampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NR-SampleAppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		04BF8186241C1D4900164E1F /* NR_SampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NR_SampleAppUITests.swift; sourceTree = "<group>"; };
 		04BF8188241C1D4900164E1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04BF8194241C1DC200164E1F /* NewRelicAgent.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = NewRelicAgent.framework; sourceTree = "<group>"; };
+		04BF8196241C1E5500164E1F /* NR-SampleApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NR-SampleApp-Bridging-Header.h"; sourceTree = "<group>"; };
+		04BF819C241C257B00164E1F /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		04BF819E241C258E00164E1F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		04BF81A0241C25AD00164E1F /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		04BF81A1241C25BF00164E1F /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +69,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BF819D241C257B00164E1F /* CoreTelephony.framework in Frameworks */,
+				04BF81A3241C25DD00164E1F /* libc++.tbd in Frameworks */,
+				04BF81A2241C25D300164E1F /* libz.tbd in Frameworks */,
+				04BF819F241C258E00164E1F /* SystemConfiguration.framework in Frameworks */,
+				04BF8195241C1DC200164E1F /* NewRelicAgent.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,10 +97,12 @@
 		04BF8156241C1D4600164E1F = {
 			isa = PBXGroup;
 			children = (
+				04BF8194241C1DC200164E1F /* NewRelicAgent.framework */,
 				04BF8161241C1D4600164E1F /* NR-SampleApp */,
 				04BF817A241C1D4900164E1F /* NR-SampleAppTests */,
 				04BF8185241C1D4900164E1F /* NR-SampleAppUITests */,
 				04BF8160241C1D4600164E1F /* Products */,
+				04BF819B241C257B00164E1F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +127,7 @@
 				04BF816D241C1D4900164E1F /* Assets.xcassets */,
 				04BF816F241C1D4900164E1F /* LaunchScreen.storyboard */,
 				04BF8172241C1D4900164E1F /* Info.plist */,
+				04BF8196241C1E5500164E1F /* NR-SampleApp-Bridging-Header.h */,
 			);
 			path = "NR-SampleApp";
 			sourceTree = "<group>";
@@ -131,6 +150,17 @@
 			path = "NR-SampleAppUITests";
 			sourceTree = "<group>";
 		};
+		04BF819B241C257B00164E1F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04BF81A1241C25BF00164E1F /* libz.tbd */,
+				04BF81A0241C25AD00164E1F /* libc++.tbd */,
+				04BF819E241C258E00164E1F /* SystemConfiguration.framework */,
+				04BF819C241C257B00164E1F /* CoreTelephony.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -141,6 +171,7 @@
 				04BF815B241C1D4600164E1F /* Sources */,
 				04BF815C241C1D4600164E1F /* Frameworks */,
 				04BF815D241C1D4600164E1F /* Resources */,
+				04BF819A241C231F00164E1F /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -199,6 +230,7 @@
 				TargetAttributes = {
 					04BF815E241C1D4600164E1F = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					04BF8176241C1D4900164E1F = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -256,6 +288,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04BF819A241C231F00164E1F /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SCRIPT=`/usr/bin/find \"${SRCROOT}\" -name newrelic_postbuild.sh | head -n 1`\n\n/bin/sh \"${SCRIPT}\" \"AAa4cda45386d1e3fa99ab5e8db961ebb926e49e69-NRMA\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04BF815B241C1D4600164E1F /* Sources */ = {
@@ -438,7 +491,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "NR-SampleApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -446,6 +504,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "New-Relic.NR-SampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NR-SampleApp/NR-SampleApp-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -455,7 +515,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "NR-SampleApp/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -463,6 +528,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "New-Relic.NR-SampleApp";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "NR-SampleApp/NR-SampleApp-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
