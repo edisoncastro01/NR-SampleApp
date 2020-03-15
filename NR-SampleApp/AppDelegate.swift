@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        NewRelic.start(withApplicationToken:"AAa4cda45386d1e3fa99ab5e8db961ebb926e49e69-NRMA")
+        NewRelic.start(withApplicationToken:"[Add your NR Mobile App Token Here]")
         NewRelic.recordBreadcrumb("AppDelegate"
         , attributes:["Name" : "didFinishLaunchingWithOptions", "userId" : "SampleUser", "action" : "tapped", "location" : "AppDelegate:didFinishLaunchingWithOptions"])
         NewRelic.recordCustomEvent("MobileCustomEdTest", attributes: ["where" : "AppDelegate:didFinishLaunchingWithOptions", "value": 1])
